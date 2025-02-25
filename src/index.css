@@ -1,13 +1,167 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(76, 76, 192);
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  color: rgb(76, 76, 192);
+  font-size: 4rem;
+}
+
+.cont h3 {
+  font-size: 2rem;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+  padding-inline: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(76, 76, 192);
+}
+
+.loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: -38px -6px, -14px 6px, 14px -6px;
+  }
+  33% {
+    box-shadow: -38px 6px, -14px -6px, 14px 6px;
+  }
+  66% {
+    box-shadow: -38px -6px, -14px 6px, 14px -6px;
+  }
+  100% {
+    box-shadow: -38px 6px, -14px -6px, 14px 6px;
+  }
+}
+
+.question {
+  color: black;
+  font-size: 1.5rem;
+  color: #212529;
+}
+
+.option {
+  cursor: pointer;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.option:hover {
+  background-color: #1e1f1f;
+  color: white;
+}
+
+.answer {
+  position: relative;
+  left: 50px;
+}
+
+.correct {
+  background-color: rgb(33, 176, 33);
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
+
+.my-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-next {
+  padding: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(76, 76, 192);
+}
+
+progress {
+  width: 100%;
+  padding: 0.7rem;
+}
+
+.finished {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-restart {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.timer {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.choosing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.choosing select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  padding-inline: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-go {
+  padding: 0.7rem;
+  padding-inline: 2.5rem;
 }
